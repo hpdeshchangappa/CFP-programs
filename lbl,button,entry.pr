@@ -1,0 +1,44 @@
+import tkinter as tk
+a=tk.Tk()
+a.geometry("300x300")
+a.config(bg="lightgreen")
+
+l=tk.Label(a,text="Form",anchor=tk.CENTER)
+l.grid(column=1)
+
+l1=tk.Label(a,text="Name : ")
+l1.grid(row=1,column=0)
+
+e1=tk.Entry(width=30)
+e1.grid(row=1,column=1)
+
+l2=tk.Label(a,text="SrNo : ")
+l2.grid(row=2,column=0)
+
+e2=tk.Entry(width=40,show="*")
+e2.grid(row=2,column=1)
+
+l3=tk.Label(a,text="Address : ")
+l3.grid(row=3,column=0)
+
+e3=tk.Text(a,width=30,height=5)
+e3.grid(row=3,column=1)
+
+e1.insert(0,"")
+e2.insert(0,"")
+e3.insert(0,"")
+def myclick():
+    message1="Name : "+e1.get()
+    message2="SrNo : "+e2.get()
+    message3="Address : "+e3.get()
+    l3=tk.Label(a,text=message1)
+    l3.grid(row=5,column=1)
+    l4=tk.Label(a,text=message2)
+    l4.grid(row=6,column=1)
+    l5=tk.Label(a,text=message3)
+    l5.grid(row=7,column=1)
+
+b1=tk.Button(a,text="Submit",bg="lightblue",command=myclick)
+b1.grid(row=4,column=1)
+
+a.mainloop()

@@ -1,0 +1,17 @@
+import tkinter as tk
+a=tk.Tk()
+a.geometry("350x350")
+
+l=tk.Label(a,text="Text Area")
+l.grid(column=1)
+
+l1=tk.Label(a,text="Address : ")
+l1.grid(row=1,column=0)
+
+text_area=tk.Text(a,width=30,height=5,
+                  insertbackground="blue",
+                  selectbackground="green",
+                  selectforeground="yellow"	)
+text_area.grid(row=1,column=1)
+ 
+a.mainloop()
